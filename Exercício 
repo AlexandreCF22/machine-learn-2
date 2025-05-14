@@ -1,0 +1,98 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOno+tJ0m8wo3ewwQ53GUsN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AlexandreCF22/machine-learn-2/blob/main/Exerc%C3%ADcio%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Fine-tuning e Destilação: Síntese de Exemplos\n",
+        "\n",
+        "Este notebook resume seis exemplos discutidos sobre **fine-tuning** e **destilação de modelos**, duas técnicas fundamentais no aprendizado de máquina, especialmente no contexto de modelos de linguagem e redes neurais profundas.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 1. Fine-Tuning com Dados Específicos do Domínio\n",
+        "\n",
+        "**Resumo**: Um modelo pré-treinado é ajustado usando dados específicos de um domínio (ex: jurídico, médico).  \n",
+        "**Objetivo**: Especializar o modelo em um vocabulário ou estilo específico.  \n",
+        "**Resultado**: Melhor desempenho em tarefas específicas, mas risco de overfitting se os dados forem escassos.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 2. Fine-Tuning com Tarefa Específica\n",
+        "\n",
+        "**Resumo**: O modelo é ajustado para melhorar o desempenho em uma tarefa-alvo (ex: classificação, resumo).  \n",
+        "**Técnica**: Treinamento supervisionado com labels para tarefas definidas.  \n",
+        "**Benefício**: Acurácia superior em tarefas bem definidas.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 3. Fine-Tuning com Low-Rank Adaptation (LoRA)\n",
+        "\n",
+        "**Resumo**: Em vez de ajustar todos os pesos, o LoRA insere camadas de baixa dimensão para adaptar o modelo.  \n",
+        "**Vantagem**: Reduz drasticamente o custo computacional.  \n",
+        "**Uso**: Ideal para modelos grandes (como LLMs) com recursos limitados.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 4. Destilação Clássica (Knowledge Distillation)\n",
+        "\n",
+        "**Resumo**: Um modelo grande (teacher) transfere seu conhecimento para um modelo menor (student).  \n",
+        "**Processo**: O student aprende a imitar as saídas \"soft\" do teacher.  \n",
+        "**Resultado**: Modelo menor com desempenho similar, ideal para deploy em produção.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 5. Destilação com Dados Sintéticos\n",
+        "\n",
+        "**Resumo**: Dados gerados artificialmente pelo modelo teacher são usados para treinar o student.  \n",
+        "**Vantagem**: Elimina necessidade de dados rotulados reais.  \n",
+        "**Risco**: Bias ou erros do teacher podem ser herdados.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## 6. Destilação Multi-Teacher\n",
+        "\n",
+        "**Resumo**: Vários modelos teacher colaboram para treinar um student mais generalista.  \n",
+        "**Método**: Média das saídas ou consenso entre múltiplos modelos.  \n",
+        "**Aplicação**: Criação de modelos robustos e com maior generalização.\n",
+        "\n",
+        "---\n",
+        "\n",
+        "## Conclusão\n",
+        "\n",
+        "Fine-tuning e destilação são técnicas complementares:  \n",
+        "- **Fine-tuning** visa especializar e adaptar.  \n",
+        "- **Destilação** visa compactar e otimizar.  \n",
+        "Ambas são essenciais para o desenvolvimento de modelos eficientes e aplicáveis no mundo real."
+      ],
+      "metadata": {
+        "id": "EFLoJYnVg8ZF"
+      }
+    }
+  ]
+}
